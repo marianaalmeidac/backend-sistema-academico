@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
+
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
@@ -21,6 +23,18 @@ public class Aluno {
     private String cpf;
 
     private String email;
+
+    private LocalDate dataNascimento;
+
+    private String endereco;
+
+    private String telefone;
+
+    private String curso;
+
+    private String semestre;
+
+    private LocalDate dataMatricula;
 
 }
 
