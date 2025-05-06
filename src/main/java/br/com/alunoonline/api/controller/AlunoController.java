@@ -42,7 +42,7 @@ public class AlunoController {
 
     @DeleteMapping("/{id")
     public ResponseEntity<Void> deletarAluno(@PathVariable Long id) {
-        alunoService.deletarAluno(id);
+        alunoService.deletarAlunoPorId(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 }

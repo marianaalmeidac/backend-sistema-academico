@@ -29,7 +29,7 @@ public class  AlunoService {
         return alunoRepository.findById(id);
     }
 
-    public void deletarAluno(Long id) {
+    public void deletarAlunoPorId(Long id) {
         alunoRepository.deleteById(id);
     }
 
