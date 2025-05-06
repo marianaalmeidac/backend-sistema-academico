@@ -64,7 +64,7 @@ Requisição para listar todos os alunos cadastrados no sistema.
 
 ![Request para listar todos os alunos](imagens/insomnia_listarAlunos.png)
 
-A requisição HTTP GET foi enviada para o endpoint `/alunos`, retornando todos os alunos cadastrados.
+(A requisição HTTP GET foi enviada para o endpoint `/alunos`, retornando todos os alunos cadastrados).
 
 **Resposta (Insomnia/Postman):**
 
@@ -77,7 +77,6 @@ Status `200 OK`.
     "nome": "Mariana",
     "cpf": "123.222.333-00",
     "email": "mari@emial.com"
-    // ... outros campos (podem ser null)
   },
   {
     "id": 7,
@@ -90,10 +89,9 @@ Status `200 OK`.
     "curso": "Sistemas para Internet",
     "semestreAtual": 3,
     "dataMatricula": "2024-08-16"
-  },
+  }
 ]
 ```
-
 
 **Resultado no Banco de Dados (DBeaver):**
 
@@ -110,7 +108,7 @@ Requisição para buscar um aluno específico no sistema através do seu identif
 
 ![Request para buscar aluno por ID (existente)](imagens/insomnia_buscarAlunoId_16_sucesso.png)
 
-Requisição HTTP GET foi enviada para o endpoint `/alunos/{id}` (16).
+(Requisição HTTP GET foi enviada para o endpoint `/alunos/{id}` (16)).
 
 **Resposta para um aluno existente (Insomnia/Postman):**
 
@@ -138,7 +136,7 @@ Requisição para deletar um aluno específico do sistema através do seu identi
 
 ![Request para deletar aluno por ID (existente)](imagens/insomnia_deletarAluno_sucesso.png)
 
-A requisição HTTP DELETE foi enviada para o endpoint `/alunos/{id}`.
+A requisição HTTP DELETE foi enviada para o endpoint `/alunos/{id}` e resultado DBeaver.
 
 Status `204 No Content`.
 
