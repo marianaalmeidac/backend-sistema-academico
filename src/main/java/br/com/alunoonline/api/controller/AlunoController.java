@@ -12,7 +12,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/alunos")
-public class AlunoController {
+public class  AlunoController {
 
     @Autowired
     AlunoService alunoService;
@@ -40,10 +40,13 @@ public class AlunoController {
         }
     }
 
-    @DeleteMapping("/{id")
+    @DeleteMapping("/{id}")
     public ResponseEntity<Void> deletarAluno(@PathVariable Long id) {
         alunoService.deletarAlunoPorId(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
+
+
 }
+
  

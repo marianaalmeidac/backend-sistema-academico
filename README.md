@@ -8,7 +8,7 @@ API de back-end para um sistema de gerenciamento acadêmico desenvolvida em Java
 
 Requisição para criar um aluno com informações básicas (nome, CPF, e-mail).
 
-**Requisição (Insomnia/Postman):**
+**Requisição (Insomnia):**
 
 ![Request para criar um aluno (básico)](imagens/insomnia_criarAluno.jpg)
 ```json
@@ -19,7 +19,7 @@ Requisição para criar um aluno com informações básicas (nome, CPF, e-mail).
 }
 ```
 
-**Resposta (Insomnia/Postman):**
+**Resposta (Insomnia):**
 
 Status `201 Created`.
 
@@ -48,7 +48,7 @@ Requisição para criar um aluno com informações detalhadas(nome, CPF, e-mail,
 }
 ```
 
-**Resposta (Insomnia/Postman):**
+**Resposta (Insomnia):**
 
 Status `201 Created`.
 
@@ -66,7 +66,7 @@ Requisição para listar todos os alunos cadastrados no sistema.
 
 (A requisição HTTP GET foi enviada para o endpoint `/alunos`, retornando todos os alunos cadastrados).
 
-**Resposta (Insomnia/Postman):**
+**Resposta (Insomnia):**
 
 Status `200 OK`.
 
@@ -102,7 +102,7 @@ Resultado da consulta SQL `SELECT * FROM aluno;` no banco de dados, onde é poss
 
 ### 4. Buscar Aluno por ID
 
-Requisição para buscar um aluno específico no sistema através do seu identificador único (ID) (Ao fornecer o ID de um aluno cadastrado, a API retorna os detalhes desse aluno. Caso o ID fornecido não corresponda a nenhum aluno no sistema, a API retorna uma resposta indicando que o aluno não foi encontrado).
+Requisição para buscar um aluno específico no sistema através do seu identificador único (ID). (Caso o ID fornecido não corresponda a nenhum aluno no sistema, a API retorna uma resposta indicando que o aluno não foi encontrado).
 
 **Requisição para um aluno existente (Insomnia/Postman):**
 
@@ -131,13 +131,17 @@ Status `200 OK`.
 
 ### 5. Deletar Aluno por ID:
 
-Requisição para deletar um aluno específico do sistema através do seu identificador único (ID).
+Requisição para deletar um aluno através do ID (16)
 
+**Requisição (Insomnia):**
 
-![Request para deletar aluno por ID (existente)](imagens/insomnia_deletarAluno_sucesso.png)
+![Request para deletar aluno por ID (Insomnia)](imagens/funcao_delete_status204.png) 
 
-A requisição HTTP DELETE foi enviada para o endpoint `/alunos/{id}` e resultado DBeaver.
+**Resposta (Insomnia/Dbeaver):**
 
-Status `204 No Content`.
-
-
+Status '204 No Content'.
+```json
+{
+    "status": "Aluno deletado com sucesso"
+}
+```
