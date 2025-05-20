@@ -46,10 +46,14 @@ public class  AlunoService {
         }
         // 3: se existir (chegar aqui) armazenar o aluno em uma variavel para depois edita-lo
         Aluno alunoParaEditar = alunoDoBancoDeDados.get();
-        // 4: com o aluno para ser editado,faz-se os stes necessarios para atualizar os atributos dele
+
+        // 4: com o aluno para ser editado,faz os sets necessarios para atualizar os atributos dele
         alunoParaEditar.setNome(aluno.getNome());    //QUAIS SÃO OS ATRIBUTOS DE ALUNO QUE SE PODE EDITAR?
         alunoParaEditar.setCpf(aluno.getCpf());
-        alunoParaEditar.setEmail(aluno.getCpf());
+        alunoParaEditar.setEmail(aluno.getEmail());
+
+        // 5: apos aluno ser editado, devolve ele atualizado no banco de dados
+        alunoRepository.save(alunoParaEditar);
     }
 
 }

@@ -21,7 +21,6 @@ public class  AlunoController {
     @ResponseStatus(HttpStatus.CREATED)
     public void criarAluno(@RequestBody Aluno aluno) {
         alunoService.criarAluno(aluno);
-
     }
 
     @GetMapping
@@ -46,7 +45,13 @@ public class  AlunoController {
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
+    @PostMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void atualizarAlunoPorId(@PathVariable Long id, @RequestBody Aluno aluno){
 
+        alunoService.atualizarAlunoPorId(id, aluno);
+
+    }
 }
 
  
